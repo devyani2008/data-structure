@@ -2,31 +2,31 @@
 
 void main()
 {
-    int a[2][2], b[2][2], c[2][2], i, j, k;
+    int m1[2][3], m2[3][2], m3[2][2], i, j, k;
 
     printf("Enter first matrix:\n");
     for(i=0;i<2;i++)
-        for(j=0;j<2;j++)
-            scanf("%d",&a[i][j]);
+        for(j=0;j<3;j++)
+            scanf("%d",&m1[i][j]);
 
     printf("Enter second matrix:\n");
-    for(i=0;i<2;i++)
+    for(i=0;i<3;i++)
         for(j=0;j<2;j++)
-            scanf("%d",&b[i][j]);
+            scanf("%d",&m2[i][j]);
 
     for(i=0;i<2;i++)
         for(j=0;j<2;j++)
         {
-            c[i][j]=0;
+            m3[i][j]=0;
             for(k=0;k<2;k++)
-                c[i][j]+=a[i][k]*b[k][j];
+                m3[i][j]+=m1[i][j]*m2[i][j];
         }
 
     printf("Result:\n");
     for(i=0;i<2;i++)
     {
         for(j=0;j<2;j++)
-            printf("%d ",c[i][j]);
+            printf("%d ",m3[i][j]);
         printf("\n");
     }
 }
